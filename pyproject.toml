@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "discord-role-sync"
+version = "0.2.0"
+description = "Sync Discord server roles from state files without running a bot daemon"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "Alex", email = "alex@local" },
+]
+dependencies = [
+    "httpx>=0.25.0",
+    "pyyaml>=6.0.1",
+    "pydantic>=2.4.0",
+    "rich>=13.5.0",
+]
+
+[project.scripts]
+discord-role-sync = "discord_role_sync.cli:main"
+drs = "discord_role_sync.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
