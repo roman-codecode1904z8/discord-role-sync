@@ -58,3 +58,5 @@ drs apply --guild 111222333444 --file roles.yaml --prune
 ```
 
 Rate limits are handled automatically with backoff, but for large guilds (>10k members) fetching the full member list can take a minute.
+
+<!-- refreshed: 2026-09-08 -->
